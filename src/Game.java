@@ -20,7 +20,7 @@ public class Game extends Canvas implements Runnable{
 	
 	private Handler handler;
 	
-	private HUD hud;
+	private HUD hud = new HUD();
 	
 	public Game() {
 		handler = new Handler();
@@ -37,8 +37,6 @@ public class Game extends Canvas implements Runnable{
 		}
 		
 		handler.addObject(new Player(0, 0, ID.Player, handler));
-		
-		hud = new HUD();
 	}
 	
 	public static Coin[][] getGrid() {
